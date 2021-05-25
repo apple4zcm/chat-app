@@ -19,5 +19,9 @@ class RoomsController < ApplicationController
 
   def room_params
     params.require(:room).permit(:name, user_ids: [])
+
+  def new
+    @rooms = Room.new
   end
+end
 end
